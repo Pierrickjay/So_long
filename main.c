@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: pjay <pjay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 09:35:57 by pjay              #+#    #+#             */
-/*   Updated: 2022/12/16 11:47:56 by pjay             ###   ########.fr       */
+/*   Updated: 2023/07/08 15:51:39 by pjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	ft_search_string(char *str, char *cmp)
 	return (0);
 }
 
-int	main(int ac, char **av)
+int	main(int ac, char **av, char **env)
 {
 	t_data	*data;
 
-	if (ac != 2)
+	if (ac != 2 || *env == NULL || env == NULL)
 		return (0);
 	if (ft_search_string(av[1], ".ber") != 1)
 	{

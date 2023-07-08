@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: pjay <pjay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 09:36:50 by pjay              #+#    #+#             */
-/*   Updated: 2022/12/16 15:13:30 by pjay             ###   ########.fr       */
+/*   Updated: 2023/07/08 16:05:23 by pjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ int		moove_left(t_data *data, int i);
 int		moove_right(t_data *data, int i);
 void	make_the_moove(t_data *data, int to_add, char c, int i);
 void	hollywood_free(t_data *data);
+void	free_map(t_data *data);
 
 #endif

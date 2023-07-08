@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: pjay <pjay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:59:42 by pjay              #+#    #+#             */
-/*   Updated: 2022/12/16 14:59:02 by pjay             ###   ########.fr       */
+/*   Updated: 2023/07/08 16:22:23 by pjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,19 @@ void	init_game(t_data *data)
 	i = 0;
 	count = 0;
 	data->mlx = mlx_init();
+	if (data->mlx == NULL)
+	{
+		free_map(data);
+		exit(0);
+	}
 	set_image(data);
 	data->mlx_win = mlx_new_window(data->mlx, data->size_l, data->size_h,
 			"SOOOOOOLONGGG!");
+	if (data->mlx_win == NULL)
+	{
+		free_map(data);
+		exit(0);
+	}
 	set_hooks(data);
 	set_wall_player(data, data->map);
 	set_exit_collectible(data, data->map);
@@ -49,6 +59,5 @@ int	init_map(char *av, t_data *data)
 		free(data->map);
 		return (0);
 	}
-	i = 0;
 	return (1);
 }
