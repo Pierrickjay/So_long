@@ -8,5 +8,4 @@ Step To compile the project :
   - then ./so_long maps/* (you can choose wich map you want)
 
 .▀█▀.█▄█.█▀█.█▄.█.█▄▀　█▄█.█▀█.█─█
-
 ─.█.─█▀█.█▀█.█.▀█.█▀▄　─█.─█▄█.█▄█
